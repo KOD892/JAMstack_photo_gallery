@@ -1,0 +1,16 @@
+{
+  "name": "photo-gallery",
+  "version": "1.0.0",
+  "description": "a simple JAMstack photo gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "author": "KOD892",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  }
+}
