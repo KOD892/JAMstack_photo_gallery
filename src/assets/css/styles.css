@@ -13,6 +13,7 @@ nav{
     top: 80% !important;
     left: 15.6% !important;
     display: inline !important;
+    cursor: pointer;
     z-index: 999;
 }
 .button .btn {
