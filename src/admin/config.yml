@@ -4,11 +4,11 @@ backend:
 media_folder: "public/assets/img/uploads"
 public_folder: "/assets/img/uploads"
 collections:
-  -name: "gallery"
-   label: "Gallery"
-   folder: "src/gallery-photos"
-   create: true
-   slug: "{{year}}-{{month}}-{{day}}"
-   fields: 
+  - name: "gallery"
+    label: "Gallery"
+    folder: "src/gallery-photos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}"
+    fields: 
       - {label: "Upload an image", name: "links", widget: "image", default: "blog"}     
       - {label: "Tags", name: "tags", widget: "hidden", default: ["galleryPhoto"]}   
