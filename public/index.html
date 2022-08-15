@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <title>PIC..ME</title>
+</head>
+<body>
+ 
+        <!-- navbar -->
+    <div class="navbar">
+        <nav class="transparent">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo black-text"> <i class="large material-icons">camera_alt</i>PIC..ME</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main>
+          <!--image slider-->
+     <div class="slider">
+        <ul class="slides">
+            <li>
+                <img class="responsive-img" src="/assets/img/samantha-gades-BlIhVfXbi9s-unsplash.jpg" alt="">
+            </li>
+            <li>
+                <img class="responsive-img" src="/assets/img/leone-venter-VieM9BdZKFo-unsplash.jpg" alt="">
+            </li>
+            <li>
+                <img class="responsive-img" src="/assets/img/bench-accounting-nvzvOPQW0gc-unsplash.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="button">
+        <div class="btn btn-med black z-depth-5">See Photos</div>
+    </div>
+    </main>
+</body>
+<script>
+    //img slider
+    const slider = document.querySelector('.slider');
+        M.Slider.init(slider, {
+            indicators: false,
+            height: 550,
+            transition: 500,
+            interval: 3000,
+        });
+ document.querySelector('.button').addEventListener('click',(e)=>{
+    window.location="/gallery"
+ });
+
+ </script>
+
+
+
+    <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      </script>
+</body>
+</html>    
