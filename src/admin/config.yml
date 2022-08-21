@@ -6,9 +6,10 @@ public_folder: "/assets/img/uploads"
 collections:
   - name: "gallery"
     label: "Gallery"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     folder: "src/gallery-photos"
-    create: false
-    fields: 
-      - {label: "Upload an image", name: "links", widget: "markdown", default: "blog"}     
-      - {label: "Tags", name: "tags", widget: "hidden", default: ["galleryPhoto"]}  
-      - {label: "Title", name: "title", widget: "hidden", default: ["photos"]}  
+    fields:
+      - {label: "Name", name: "title", widget: "string"}  
+      - {label: "Tags", name: "tags", widget: "hidden", default: ["galleryPhoto"]}
+      - {label: "Featured Image", name: "image", widget: "image"}  
+      - {label: "Image alt test", name: "imageAlt", widget: "string"}  

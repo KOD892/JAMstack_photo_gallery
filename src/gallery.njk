@@ -21,12 +21,9 @@ layout: 'base.njk'
         <div class="pics section z-depth-2">
             <div class="row">
                 {% for galleryPhoto in collections.galleryPhoto | reverse %}
-                   {% set length = galleryPhoto.data.links.length %} 
-                     {% for i in range(0, length) %}
                      <div class="col s12 m4">
-                        <img src="{{ galleryPhoto.data.links[i] }}" alt="" class="materialboxed responsive-img">
+                        <img src="{{ galleryPhoto.data.image }}" alt="{{ galleryPhoto.data.imageAlt }}" class="materialboxed responsive-img">
                     </div>
-                   {% endfor %}
                 {% endfor %}
                 
             </div>
