@@ -1,8 +1,12 @@
 backend:
   name: git-gateway
   branch: main 
-media_folder: "public/assets/img/uploads"
-public_folder: "/assets/img/uploads"
+# media_folder: "public/assets/img/uploads"
+# public_folder: "/assets/img/uploads"
+media_library:
+  name: uploadcare
+  config:
+    publicKey: d7aaead4c10cc686ec72
 collections:
   - name: "gallery"
     label: "Gallery"
